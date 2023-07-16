@@ -1,0 +1,85 @@
+version: 2
+
+sources: 
+    - name: sap
+      description: Fonte SAP da Adventure Works
+      schema: sap_adw
+      tables:
+        - name: address
+          description: Tabela com informações de endereços (DIM)
+          columns:
+            - name: addressid
+              description: id do endereço
+              tests:
+                - unique
+                - not_null
+        - name: countryregion
+          description: Tabela com as informações das regiões (DIM)
+          columns:
+            - name: countryregioncode
+              description: código da região
+              tests:
+                - unique
+                - not_null
+        - name: stateprovince
+          description: Tabela de informações das províncias (DIM)
+          columns:
+            - name: stateprovinceid
+              description: id da província/estado/distrito
+              tests:
+                - unique
+                - not_null
+        - name: product
+          description: Tabela de informações dos produtos (DIM)
+          columns:
+            - name: productid
+              description: id do produto
+              tests:
+                - unique
+                - not_null
+        - name: creditcard
+          description: Tabela de informações dos cartões de compra (DIM)
+          columns:
+            - name: creditcardid
+              description: id do cartão de crédito
+              tests:
+                - unique
+                - not_null
+        - name: customer
+          description: Tabela de informações dos clientes (DIM)
+          columns:
+            - name: customerid
+              description: id do cliente
+              tests:
+                - unique
+                - not_null
+        - name: salesorderdetail
+          description: Detalhes dos pedidos (FACT)
+          columns:
+            - name: salesorderid
+              description: id do pedido
+              tests:
+                - not_null
+        - name: salesorderheader
+          description: Descrição dos pedidos (FACT)
+          columns:
+            - name: salesorderid
+              description: id do pedido
+              tests:
+                - unique
+                - not_null
+        - name: salesorderheadersalesreason
+          description: Cruzamento de razões de compra dos clientes (FACT)
+          columns:
+            - name: salesorderid
+              description: id do pedido
+              tests:
+                - not_null
+        - name: salesreason
+          description: Levantamento dos motivos/razões de compra (DIM)
+          columns:
+            - name: salesreasonid
+              description: id da razão/motivo de compra
+              tests:
+                - unique
+                - not_null    
