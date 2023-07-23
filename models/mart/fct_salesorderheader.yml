@@ -1,10 +1,10 @@
 version: 2
 
 models: 
-    - name: dim_countryregion
-      description: "Tabela dimensão com descrição dos países"
+    - name: fct_salesorderheader
+      description: "Tabela fato com dados operacionais do pedido"
       columns:
-          - name: countryregioncode
+          - name: salesorderid
             description: "Chave primária original da tabela"
             tests:
               - unique

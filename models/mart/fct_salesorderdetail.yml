@@ -1,0 +1,10 @@
+version: 2
+
+models: 
+    - name: fct_salesorderdetail
+      description: "Tabela fato com dados financeiros do pedido"
+      columns:
+          - name: salesorderid
+            description: "Chave primária original da tabela"
+            tests:
+              - not_null
