@@ -1,0 +1,11 @@
+version: 2
+
+models: 
+    - name: dim_creditcard
+      description: "Tabela diemsnão com a descrição dos meios de pagamento"
+      columns:
+          - name: creditcardid
+            description: "Chave primária original da tabela"
+            tests:
+              - unique
+              - not_null

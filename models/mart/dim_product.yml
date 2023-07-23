@@ -1,0 +1,11 @@
+version: 2
+
+models: 
+    - name: dim_product
+      description: "Tabela dimensão com a descrição dos produtos"
+      columns:
+          - name: productid
+            description: "Chave primária original da tabela"
+            tests:
+              - unique
+              - not_null
