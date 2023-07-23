@@ -1,0 +1,11 @@
+version: 2
+
+models: 
+    - name: dim_person_address
+      description: "Tabela diemnsão com descrição dos endereços"
+      columns:
+          - name: addressid
+            description: "Chave primária original da tabela"
+            tests:
+              - unique
+              - not_null

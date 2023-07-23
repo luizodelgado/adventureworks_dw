@@ -1,0 +1,11 @@
+version: 2
+
+models: 
+    - name: dim_salesreason
+      description: "Tabela dimensão com a descrição das razões"
+      columns:
+          - name: salesreasonid
+            description: "Chave primária original da tabela"
+            tests:
+              - unique
+              - not_null

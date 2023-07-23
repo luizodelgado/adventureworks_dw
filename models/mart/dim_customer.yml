@@ -1,0 +1,11 @@
+version: 2
+
+models: 
+    - name: dim_customer
+      description: "Tabela dimensão com descrição dos clientes"
+      columns:
+          - name: customerid
+            description: "Chave primária original da tabela"
+            tests:
+              - unique
+              - not_null

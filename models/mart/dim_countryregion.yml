@@ -1,0 +1,11 @@
+version: 2
+
+models: 
+    - name: dim_countryregion
+      description: "Tabela dimensão com descrição dos países"
+      columns:
+          - name: addressid
+            description: "Chave primária original da tabela"
+            tests:
+              - unique
+              - not_null

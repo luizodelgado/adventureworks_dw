@@ -1,0 +1,11 @@
+version: 2
+
+models: 
+    - name: dim_stateprovince
+      description: "Tabela dimensão com a descrição das províncias, estados e distritos"
+      columns:
+          - name: stateprovinceid
+            description: "Chave primária original da tabela"
+            tests:
+              - unique
+              - not_null
