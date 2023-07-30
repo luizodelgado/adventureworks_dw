@@ -5,14 +5,14 @@ with
         select
             customerid_sk
             , customerid
-        from {{  ref('dim_customer')  }}
+        from {{  ref('dim_customers')  }}
     )
 
     , sales_creditcard_with_sk as (
         select
             creditcardid_sk
             , creditcardid
-        from {{  ref('dim_creditcard')  }}
+        from {{  ref('dim_creditcards')  }}
     )
 
     , person_address_with_sk as (
@@ -20,7 +20,7 @@ with
             addressid_sk
             , addressid
             , stateprovinceid
-        from {{  ref('dim_address')  }}
+        from {{  ref('dim_addresses')  }}
     )
 
     , person_stateprovince_with_sk as (
@@ -28,14 +28,14 @@ with
             stateprovinceid_sk
             , stateprovinceid
             , countryregioncode
-        from {{  ref('dim_stateprovince')  }}
+        from {{  ref('dim_stateprovinces')  }}
     )  
 
     , person_countryregion_with_sk as (
         select
             countryregioncode_sk
             , countryregioncode
-        from {{  ref('dim_countryregion')  }}
+        from {{  ref('dim_countryregions')  }}
     )
 
     , sales_salesorderheader_with_fk as (

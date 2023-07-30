@@ -1,8 +1,8 @@
 version: 2
 
 models: 
-    - name: fct_salesorderheadersalesreason
-      description: "Tabela fato com os dados de razão de compra"
+    - name: fct_order_items
+      description: "Tabela fato com dados financeiros do pedido"
       columns:
           - name: salesorderid
             description: "Chave primária original da tabela"

@@ -5,7 +5,7 @@ with
         select
             salesreasonid_sk
             , salesreasonid
-        from {{  ref('dim_salesreason')  }}
+        from {{  ref('dim_salesreasons')  }}
     )
 
     , sales_salesorderheadersalesreason_with_fk as (
