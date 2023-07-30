@@ -3,9 +3,9 @@ with
         select --selecionar primeiros as keys e em uma ordem que faça sentido
             salesorderid
             , revisionnumber
-            , orderdate
-            , duedate
-            , shipdate
+            , cast(left(orderdate, 10) as date) as orderdate
+            , cast(left(duedate, 10) as date) as duedate
+            , cast(left(shipdate, 10) as date) as shipdate
             , status
             , onlineorderflag
             , purchaseordernumber
